@@ -31,7 +31,6 @@ import {
 import { Link } from "react-router-dom";
 import { DemoTag, Modal, PageTitle } from "../components/Ui";
 import {
-  clipManifest,
   LAST_FRAME,
   poseAtFrame,
   resolveQuality,
@@ -40,6 +39,13 @@ import {
 } from "./motion";
 import type { CameraView, Quality, RenderMode } from "./motion";
 import SvgScene from "./SvgScene";
+import {
+  ScenarioPanel,
+  ObservationTools,
+  ComparisonReadout,
+} from "./ObservationPanels";
+import { SCENARIOS, MARKERS, RIG_VERSION } from "./rig";
+import type { ScenarioId, Guides, MarkerId } from "./rig";
 const SkierScene = lazy(() => import("./SkierScene"));
 class SceneBoundary extends Component<
   { children: ReactNode; onFailure: () => void },
@@ -68,6 +74,14 @@ const cameraButtons = [
 ] as const;
 export default function MotionLab() {
   const [frame, setFrame] = useState(0);
+  const [scenario, setScenario] = useState<ScenarioId>("balance");
+  const [guides, setGuides] = useState<Guides>({
+    joints: false,
+    body: false,
+    skis: false,
+  });
+  const [marker, setMarker] = useState<MarkerId>("root");
+  const selectedScenario = SCENARIOS.find((s) => s.id === scenario)!;
   const [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
   const [view, setView] = useState<CameraView>("orbit");
@@ -152,6 +166,27 @@ export default function MotionLab() {
         </p>
         <button onClick={() => setInfo(true)}>О модели</button>
       </div>
+      <ScenarioPanel
+        scenario={scenario}
+        frame={frame}
+        onScenario={(id) => {
+          setScenario(id);
+          setFrame(0);
+          setPlaying(false);
+          setCompare(false);
+          setA(0);
+          setB(120);
+        }}
+        onSeek={(f) => {
+          setFrame(f);
+          setPlaying(false);
+        }}
+        onRecommended={() => {
+          setView(selectedScenario.bestView);
+          setRotation(0);
+          setReset((r) => r + 1);
+        }}
+      />
       <section className="lab-workbench" aria-label="Лаборатория движения">
         <div className="viewport-toolbar">
           <div className="render-tabs" role="group" aria-label="Представление">
@@ -184,7 +219,7 @@ export default function MotionLab() {
               <option value="high">Высокая</option>
             </select>
           </div>
-          <span className="clip-id">NEUTRAL / 01</span>
+          <span className="clip-id">{selectedScenario.letter} / TECH 02</span>
         </div>
         <div
           className={`scene-container ${compare ? "comparing" : ""}`}
@@ -193,6 +228,8 @@ export default function MotionLab() {
           data-view={view}
           data-quality={resolvedQuality}
           data-frame={frame}
+          data-scenario={scenario}
+          data-rig={RIG_VERSION}
         >
           {mode === "3d" ? (
             <SceneBoundary onFailure={fallback}>
@@ -214,6 +251,9 @@ export default function MotionLab() {
                   a={a}
                   b={b}
                   onContextLost={fallback}
+                  scenario={scenario}
+                  guides={guides}
+                  marker={marker}
                 />
               </Suspense>
             </SceneBoundary>
@@ -225,6 +265,9 @@ export default function MotionLab() {
               compare={compare}
               a={a}
               b={b}
+              scenario={scenario}
+              guides={guides}
+              marker={marker}
             />
           )}
           <div className="scene-corner">
@@ -282,7 +325,9 @@ export default function MotionLab() {
             </span>
             <span>
               {mode === "3d"
-                ? "Повернуть: потяните сцену"
+                ? view === "orbit"
+                  ? "Повернуть: потяните сцену"
+                  : "Ракурс фиксирован · есть свободная камера"
                 : "Свободная камера доступна в 3D"}
             </span>
           </div>
@@ -333,6 +378,12 @@ export default function MotionLab() {
             </button>
             <button
               className="play-button"
+              disabled={compare}
+              title={
+                compare
+                  ? "A/B — статические состояния; выйдите из сравнения для воспроизведения"
+                  : "Воспроизведение текущего клипа"
+              }
               onClick={() => setPlaying((p) => !p)}
               aria-label={playing ? "Пауза" : "Воспроизвести"}
             >
@@ -395,22 +446,31 @@ export default function MotionLab() {
           повторит попытку.
         </div>
       )}
+      {compare && <ComparisonReadout a={a} b={b} scenario={scenario} />}
       <div className="lab-lower">
         <section className="panel lab-settings">
           <span className="card-kicker">
             <ScanLine size={17} />
             ИНСТРУМЕНТЫ НАБЛЮДЕНИЯ
           </span>
+          <ObservationTools
+            guides={guides}
+            onGuides={setGuides}
+            marker={marker}
+            onMarker={setMarker}
+            frame={frame}
+            scenario={scenario}
+          />
           <div className="setting-row">
             <div>
               <h3>
                 <Route size={17} />
-                Траектория маркера R
+                Траектория {MARKERS.find((m) => m.id === marker)!.code}
               </h3>
               <p>
                 {compare
                   ? "В A/B перенос скрыт для сравнения поз."
-                  : "Условный путь начала rig, не физического центра масс."}
+                  : "Путь выбранной точки модели. R не является центром масс."}
               </p>
             </div>
             <button
@@ -437,7 +497,10 @@ export default function MotionLab() {
               role="switch"
               aria-checked={compare}
               aria-label="Сравнить A и B"
-              onClick={() => setCompare((v) => !v)}
+              onClick={() => {
+                setCompare((v) => !v);
+                setPlaying(false);
+              }}
             >
               <span />
             </button>
@@ -471,13 +534,13 @@ export default function MotionLab() {
             ещё не оценивать.
           </h2>
           <p>
-            Нейтральное изменение положения лыжника и лыж создано для проверки
-            интерфейса. Это не физическая симуляция и не эталон техники.
+            {selectedScenario.observe} Это не физическая симуляция и не эталон
+            техники.
           </p>
           <dl>
             <div>
               <dt>Клип</dt>
-              <dd>Neutral stance · v0.1.0</dd>
+              <dd>{selectedScenario.letter} · technical clip v0.2.0</dd>
             </div>
             <div>
               <dt>Шаг</dt>
@@ -502,12 +565,13 @@ export default function MotionLab() {
         <Modal title="Границы Motion Lab" onClose={() => setInfo(false)}>
           <p>
             Модель, геометрия лыжника, лыжи и движение созданы программно
-            специально для D0.1. Чужие модели и видеозаписи не используются.
+            специально для D0.2. Чужие модели и видеозаписи не используются.
           </p>
           <p>
             Это условный rig. Его маркер R — начало модели на плоскости, не
-            измеренный центр масс. Нагрузка, скорость катания, углы и качество
-            техники не оцениваются. В A/B сравниваются моменты одной версии
+            измеренный центр масс. Нагрузка, скорость катания и качество техники
+            не оцениваются. Показанные углы — параметры геометрии модели, не
+            биомеханические измерения. В A/B сравниваются моменты одной версии
             клипа в локальных координатах.
           </p>
           <p>
@@ -518,9 +582,9 @@ export default function MotionLab() {
           <pre className="manifest-preview">
             {JSON.stringify(
               {
-                id: clipManifest.id,
-                version: clipManifest.version,
-                status: clipManifest.status,
+                id: scenario,
+                version: RIG_VERSION,
+                status: "technical-only",
                 methodicallyApproved: false,
               },
               null,

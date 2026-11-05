@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-05",
+  "os": "Linux x86_64",
+  "node": "v24.22.1",
+  "npm": "11.9.0",
+  "browser": "Chromium 155.0.8059.79 built on Debian GNU/Linux 13 (trixie)",
+  "rendering": "SwiftShader software WebGL",
+  "mobile_profile": "Chromium iPhone 13 dimensions and touch; not WebKit or physical iPhone",
+  "production_build_repeated_byte_identical": true,
+  "production_files": 16
+}

@@ -2743,3 +2743,310 @@ dialog p {
 .method-letter span {
   color: #6b5840;
 }
+/* D0.2: observation is separate from judging technique. */
+.scenario-panel {
+  background: #fff;
+  border: 1px solid #dce6de;
+  border-radius: 15px;
+  padding: 22px 25px;
+  margin: 0 0 21px;
+}
+.scenario-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.scenario-letter {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 46px;
+  background: #e7eee4;
+  color: #416b4f;
+  border-radius: 11px;
+  font-size: 25px;
+  font-weight: 650;
+}
+.scenario-header h2 {
+  font-size: 21px;
+  margin-top: 5px;
+}
+.scenario-select {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  font-size: 10px;
+  color: #526f55;
+  max-width: 300px;
+}
+.scenario-select select,
+.marker-select select {
+  font: inherit;
+  font-size: 11px;
+  max-width: 100%;
+  min-height: 39px;
+  border: 1px solid #d6e2d5;
+  border-radius: 7px;
+  background: #f7faf4;
+  padding: 8px 10px;
+  color: #365c43;
+}
+.scenario-goal {
+  font-size: 12px;
+  color: #557258;
+  margin: 15px 0;
+}
+.scenario-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 15px 0;
+  border-top: 1px solid #e6ece5;
+  border-bottom: 1px solid #e6ece5;
+}
+.scenario-context h3 {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.scenario-context p {
+  font-size: 11px;
+  color: #536e54;
+  line-height: 1.8;
+  margin-top: 6px;
+}
+.scenario-phase {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+}
+.scenario-phase > span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #486b4e;
+}
+.scenario-phase > .text-button {
+  font-size: 10px;
+  margin-left: auto;
+  gap: 5px;
+}
+.keyframes {
+  display: flex;
+  gap: 5px;
+}
+.keyframes button {
+  font-size: 9px;
+  min-height: 34px;
+  padding: 6px 9px;
+  border: 1px solid #d8e2d3;
+  background: #f7faf3;
+  border-radius: 6px;
+}
+.keyframes button[aria-pressed="true"] {
+  background: #e5eddf;
+  color: #315332;
+  border-color: #8ca57f;
+}
+.observation-tools {
+  border-bottom: 1px solid #e2e9de;
+  padding: 18px 0;
+}
+.observation-tools > h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.guide-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  margin: 16px 0;
+}
+.guide-toggles label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #436249;
+  min-height: 30px;
+}
+.guide-toggles input {
+  accent-color: #507950;
+  width: 16px;
+  height: 16px;
+}
+.marker-select {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: #496849;
+  gap: 5px;
+}
+.marker-select select {
+  font-size: 11px;
+  width: 100%;
+}
+.coordinate-readout {
+  font-size: 10px;
+  margin-top: 12px;
+  color: #41603f;
+  font-variant-numeric: tabular-nums;
+}
+.coordinate-readout span {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+}
+.rig-label {
+  display: block;
+  white-space: nowrap;
+  background: #ffffffe8;
+  border: 1px solid #c8d7c9;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 9px;
+  color: #2a4a41;
+  line-height: 1.3;
+  box-shadow: 0 2px 5px #213c2210;
+  transform: translate(0, -13px);
+}
+.svg-marker-label {
+  font-size: 11px;
+  fill: #7e3c26;
+  font-weight: 700;
+}
+.comparison-readout {
+  margin-top: 20px;
+}
+.comparison-readout > .section-heading {
+  flex-wrap: wrap;
+}
+.comparison-readout > p {
+  font-size: 12px;
+  color: #526c50;
+}
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.difference-grid > div {
+  border: 1px solid #dde5d7;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f8faf4;
+  min-width: 0;
+}
+.difference-grid span {
+  font-size: 10px;
+  display: block;
+  line-height: 1.7;
+  color: #536e48;
+}
+.difference-grid strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 650;
+  margin-top: 9px;
+  color: #33553f;
+  white-space: nowrap;
+}
+.comparison-readout .comparison-boundary {
+  padding-top: 14px;
+  border-top: 1px solid #e1e8db;
+}
+.comparison-readout .comparison-local {
+  font-size: 10px;
+  margin-top: 10px;
+}
+.play-button:disabled {
+  opacity: 0.4;
+}
+@media (max-width: 1100px) {
+  .scenario-header {
+    flex-wrap: wrap;
+  }
+  .scenario-select {
+    max-width: 100%;
+    width: 100%;
+    margin: 7px 0 0;
+  }
+  .difference-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .scenario-panel {
+    padding: 19px;
+  }
+  .scenario-header h2 {
+    font-size: 20px;
+  }
+  .scenario-context {
+    gap: 15px;
+  }
+  .difference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scenario-phase > .text-button {
+    margin-left: 0;
+  }
+}
+@media (max-width: 560px) {
+  .scenario-header .card-kicker {
+    font-size: 8px;
+  }
+  .scenario-context {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .scenario-header h2 {
+    font-size: 19px;
+  }
+  .scenario-goal {
+    font-size: 11px;
+  }
+  .scenario-phase {
+    gap: 10px;
+  }
+  .scenario-phase > span {
+    width: 100%;
+  }
+  .keyframes {
+    gap: 4px;
+  }
+  .keyframes button {
+    min-height: 38px;
+    font-size: 9px;
+    padding: 7px 8px;
+  }
+  .scenario-phase > .text-button {
+    min-height: 34px;
+    font-size: 10px;
+  }
+  .difference-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+  .difference-grid strong {
+    font-size: 16px;
+  }
+  .comparison-readout .section-heading h2 {
+    font-size: 19px;
+  }
+  .rig-label {
+    font-size: 8px;
+  }
+  .marker-select select {
+    font-size: 10px;
+  }
+}

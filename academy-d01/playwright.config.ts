@@ -6,7 +6,7 @@ export default defineConfig({
   expect: { timeout: 12_000 },
   fullyParallel: false,
   workers: 1,
-  reporter: [["list"], ["json", { outputFile: "docs/test-results.json" }]],
+  reporter: [["list"], ["json", { outputFile: "docs/d02/test-results.json" }]],
   use: {
     baseURL: "http://127.0.0.1:4173",
     browserName: "chromium",

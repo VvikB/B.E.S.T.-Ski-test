@@ -1,0 +1,17 @@
+{
+  "base_commit": "10132db871b35d2653027fdd8c945fe231143f0a",
+  "unit_passed": 8,
+  "browser": {
+    "startTime": "2026-11-05T17:47:25.276Z",
+    "duration": 67270.56300000001,
+    "expected": 31,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": "passed",
+  "format": "passed",
+  "production_build": "passed",
+  "physical_iPhone": false,
+  "methodical_acceptance": false
+}

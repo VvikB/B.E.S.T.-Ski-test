@@ -1,0 +1,33 @@
+
+> best-academy-d01@0.2.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+node_modules/react-router/dist/development/index.mjs (11:0): Module level directives cause errors when bundled, "use client" in "node_modules/react-router/dist/development/index.mjs" was ignored.
+node_modules/react-router/dist/development/dom-export.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/react-router/dist/development/dom-export.mjs" was ignored.
+node_modules/lucide-react/dist/esm/context.mjs (2:0): Module level directives cause errors when bundled, "use client" in "node_modules/lucide-react/dist/esm/context.mjs" was ignored.
+node_modules/lucide-react/dist/esm/Icon.mjs (2:0): Module level directives cause errors when bundled, "use client" in "node_modules/lucide-react/dist/esm/Icon.mjs" was ignored.
+✓ 2653 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.94 kB │ gzip:   0.54 kB
+dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2    8.52 kB
+dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2         9.44 kB
+dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2     14.50 kB
+dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2    15.12 kB
+dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2        24.84 kB
+dist/assets/index-Qy2waqS4.css                              44.21 kB │ gzip:  12.47 kB
+dist/assets/_commonjsHelpers-CqkleIqs.js                     0.12 kB │ gzip:   0.13 kB
+dist/assets/extends-CvVqIBrc.js                              8.67 kB │ gzip:   3.48 kB
+dist/assets/SkierScene-DOtvHGnq.js                           9.86 kB │ gzip:   3.72 kB
+dist/assets/MotionLab-fqBRcyws.js                           34.59 kB │ gzip:  12.59 kB
+dist/assets/index-Zbq7sxA_.js                               42.43 kB │ gzip:  14.26 kB
+dist/assets/react-core-ivfDiVuD.js                         260.38 kB │ gzip:  82.78 kB
+dist/assets/three-engine-DGNo5HSX.js                       906.73 kB │ gzip: 247.54 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.38s

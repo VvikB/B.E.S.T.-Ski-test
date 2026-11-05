@@ -39,9 +39,9 @@ export function cameraPosition(
   compare = false,
 ): [number, number, number] {
   const scale = compare ? 1.45 : 1;
-  if (view === "top") return [0, 6.5 * scale, 0.001];
-  if (view === "side") return [6 * scale, 1.2, 0];
-  if (view === "front") return [0, 1.2, 6 * scale];
+  if (view === "top") return [0, 6.5 * scale, 0];
+  if (view === "side") return [6 * scale, 1, 0];
+  if (view === "front") return [0, 1, 6 * scale];
   return [4 * scale, 3.1 * scale, 5.4 * scale];
 }
 export const clipManifest = {

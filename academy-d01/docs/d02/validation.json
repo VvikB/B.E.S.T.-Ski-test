@@ -1,0 +1,28 @@
+{
+  "unit": {
+    "passed": 22,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-05T18:06:19.703Z",
+    "duration": 92652.702,
+    "expected": 34,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "format": "passed",
+  "typecheck": "passed",
+  "production_build": "passed",
+  "repeated_build_byte_identical": true,
+  "original_document_files_preserved": 31,
+  "real_iPhone_tested": false,
+  "methodical_acceptance": false,
+  "known_open": [
+    "Full mesh collision validation",
+    "Physical iPhone Safari performance and touch",
+    "Methodical specialist review",
+    "Automatic label collision avoidance",
+    "Backend and persistent storage outside D0.2"
+  ]
+}

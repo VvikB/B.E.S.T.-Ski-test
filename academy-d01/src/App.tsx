@@ -143,7 +143,7 @@ export default function App() {
           </div>
           <span className="top-status">
             <span />
-            Закрытая демонстрация D0.1
+            Закрытая демонстрация D0.2
           </span>
           <button
             className="help-button"
@@ -199,7 +199,7 @@ export default function App() {
         ))}
       </nav>
       {help && (
-        <Modal title="О демонстрации D0.1" onClose={() => setHelp(false)}>
+        <Modal title="О демонстрации D0.2" onClose={() => setHelp(false)}>
           <p>
             Это закрытый технический прототип интерфейсов и нейтрального
             движения. Все профили, группы и наблюдения синтетические. Изменения
