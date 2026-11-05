@@ -6,3 +6,10 @@ test-results/
 .env.*
 *.local
 *.tsbuildinfo
+# Local iPhone TLS credentials must never be committed.
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileconfig
+__pycache__/

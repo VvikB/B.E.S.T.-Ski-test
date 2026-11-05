@@ -1,0 +1,14 @@
+{
+  "targeted_tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "python_tls_ca_and_hostname_validation": true,
+  "browser": "Linux Chromium, ephemeral self-signed certificate exception only for browser smoke",
+  "physical_iPhone_tested": false,
+  "mac_mkcert_flow_tested": false,
+  "methodical_approval": false,
+  "original_diagram_xml": "passed",
+  "frontend_and_prior_documents_unchanged_vs": "46a7cb4",
+  "existing_production_file_hashes_verified": 16,
+  "current_full_react_regression": "not rerun: frontend and build unchanged"
+}

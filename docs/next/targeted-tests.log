@@ -1,0 +1,12 @@
+test_dotfiles_sources_and_directory_listing_not_exposed (__main__.HttpsAcceptance.test_dotfiles_sources_and_directory_listing_not_exposed) ... ok
+test_external_symlink_and_encoded_traversal_blocked (__main__.HttpsAcceptance.test_external_symlink_and_encoded_traversal_blocked) ... ok
+test_https_browser_3d_svg (__main__.HttpsAcceptance.test_https_browser_3d_svg) ... ok
+test_private_key_inside_dist_rejected (__main__.HttpsAcceptance.test_private_key_inside_dist_rejected) ... ok
+test_routes_and_head (__main__.HttpsAcceptance.test_routes_and_head) ... ok
+test_security_headers (__main__.HttpsAcceptance.test_security_headers) ... ok
+test_untrusted_certificate_rejected (__main__.HttpsAcceptance.test_untrusted_certificate_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.887s
+
+OK

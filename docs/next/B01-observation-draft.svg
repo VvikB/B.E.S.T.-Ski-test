@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+<title id="title">B-01: объекты наблюдения — методический черновик</title>
+<desc id="desc">Стилизованные виды сбоку и спереди на лыжника, с подписями корпуса, коленей и ботинок. Не эталон стойки, не расчёт устойчивости.</desc>
+<rect width="760" height="460" rx="24" fill="#f4f8fb"/>
+<g font-family="sans-serif" fill="#17263a"><text x="28" y="35" font-size="21">B-01 · Схема объектов наблюдения</text><text x="28" y="62" font-size="14">ЧЕРНОВИК · не норма углов и не оценка устойчивости</text><text x="80" y="108" font-size="18">Сбоку</text><text x="462" y="108" font-size="18">Спереди</text></g>
+<path d="M30 372H730" stroke="#8194a4" stroke-width="2"/>
+<g stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M190 205L177 263L207 307L188 350" stroke="#174c73" stroke-width="17"/>
+<path d="M177 263L169 306L178 350" stroke="#56798e" stroke-width="11"/>
+<path d="M190 210L221 239L222 269" stroke="#b2772a" stroke-width="12"/>
+<path d="M130 364H278" stroke="#174c73" stroke-width="7"/>
+<path d="M178 354H207" stroke="#17263a" stroke-width="14"/>
+<path d="M166 350H183" stroke="#56798e" stroke-width="8"/>
+<path d="M510 215L510 266L488 307L486 351M550 215L550 266L567 307L570 351" stroke="#174c73" stroke-width="15"/>
+<path d="M500 213L472 239L481 271M560 213L588 239L579 271" stroke="#b2772a" stroke-width="12"/>
+<path d="M486 335V375M570 335V375" stroke="#174c73" stroke-width="14"/>
+</g>
+<path d="M178 195L209 201L194 262L166 258Z" fill="#d8a357"/>
+<rect x="501" y="195" width="58" height="72" rx="15" fill="#d8a357"/>
+<g fill="#17263a"><circle cx="196" cy="175" r="20"/><circle cx="530" cy="170" r="21"/><rect x="475" y="340" width="23" height="16" rx="4"/><rect x="558" y="340" width="23" height="16" rx="4"/></g>
+<g fill="#fff" stroke="#174c73" stroke-width="3"><circle cx="207" cy="307" r="7"/><circle cx="188" cy="350" r="7"/><circle cx="488" cy="307" r="7"/><circle cx="567" cy="307" r="7"/></g>
+<g stroke="#52667a" fill="none"><path d="M204 225L259 204H300M216 307H278M196 347L250 336H293M478 307L431 294H400"/></g>
+<g font-family="sans-serif" font-size="15" fill="#17263a"><text x="263" y="195">Корпус</text><text x="235" y="294">Колено</text><text x="251" y="328">Ботинок</text><text x="387" y="282">Колено</text><text x="464" y="401">Две отдельные лыжи</text><text x="28" y="438" font-size="13">Оригинальная условная схема · методическая проверка ожидается · силы и центр масс не показаны</text></g>
+</svg>
