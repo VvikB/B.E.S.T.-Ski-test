@@ -1,0 +1,38 @@
+{
+  "status": "design_artifacts_validated_not_product_or_methodical_acceptance",
+  "documents": 10,
+  "lessons": 40,
+  "unique_competencies": 40,
+  "lesson_prerequisites": "acyclic_all_references_exist",
+  "visual_briefs": 36,
+  "views": {
+    "сбоку": 11,
+    "спереди": 10,
+    "сверху": 15
+  },
+  "screen_states": 41,
+  "source_files_in_scope": 41,
+  "user_attachments": 3,
+  "unique_user_attachment_hashes": 2,
+  "previous_zip_files": 3,
+  "zip_members_inspected": 13,
+  "new_external_methodical_sources_available": false,
+  "local_links": "all_resolve",
+  "repositories": "unchanged_clean",
+  "rights": "not_inferred",
+  "sha256": {
+    "BEST_COMPETENCY_MAP_v3.md": "bbb14030917c4cc346a52a605bc0afc357489a4825ccf166a8b88ceeab3ca760",
+    "BEST_EXAM_PRACTICE_v3.md": "c3b8c2cc3b3bc2f5b2b0c2187977f35d48e086a2d8a6e300ba50f3353581f797",
+    "BEST_INTERACTIVES_MEDIA_v3.md": "cba3183c8e29d63572472a875c0bbd37a6aa548860ed8a73e19fed115c8cbbfb",
+    "BEST_MIGRATION_ROADMAP_v3.md": "fd2188b4aac7ebf90b3206c993c0a6987e5f7bdfc4a1594e2a6c4aafe12b34cf",
+    "BEST_ORIGINAL_LESSON_CATALOG_v3.md": "4532ad80c88370bb4a23bc7204408a903e48765a812cfaddf2fe6d415884d087",
+    "BEST_PLATFORM_ARCHITECTURE_v3.md": "d12d034ef6090f732d0709b45d210768d30682704ec1d5f32403a25fa57c063b",
+    "BEST_REVIEW_DECISIONS_v3.md": "bf3b3d25fce980b203942fc86b85e92d76ac734dc7b0eb261213bc18df3c37db",
+    "BEST_SOURCE_RIGHTS_REGISTER_v3.md": "1ea7527689e67da82a70720bc218537d1fe3ee9cbbf1af520f6add55c7473018",
+    "BEST_SPACES_UX_v3.md": "264a3d89cec1278aa2dc18e0361858ed081a0c23eded3e5d9bd06d77b1f9838c",
+    "BEST_VISUAL_BRIEFS_36_v3.md": "6c35474b84691478abe3c9bf529c3db9ac52390e38a46afe09643957c8b59f7e",
+    "SOURCE_INVENTORY.json": "221cb9edc90500ba4ad682b0cfd28100ffd5154443d1f6d27fa36a85933c1dd8",
+    "LESSON_CATALOG.json": "d78e2c891f79e09bb05fcfb2658ec2429e612c7b017dacb8f78ffc8972ff4657",
+    "VISUAL_BRIEFS_36.json": "354d9d17bd16e9169debb3e69b1e569108f6f0973ff4712461fdca312aa21042"
+  }
+}

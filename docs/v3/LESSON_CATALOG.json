@@ -1,0 +1,587 @@
+[
+  {
+    "id": "L-SAFE01",
+    "title": "Перед началом",
+    "competency": "SAFE1",
+    "prerequisites": [],
+    "goal": "Различить готовность и условия допуска",
+    "activity": "Проверить вымышленную карточку занятия и отметить недостающие условия",
+    "acceptance": "Названы ограничения; начало задачи не разрешено самим приложением",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-SAFE02",
+    "title": "Остановиться и обратиться",
+    "competency": "SAFE2",
+    "prerequisites": [
+      "L-SAFE01"
+    ],
+    "goal": "Выбрать безопасное прекращение задачи и канал помощи",
+    "activity": "Разобрать ситуацию с непониманием сигнала",
+    "acceptance": "Выбран запрос помощи вместо продолжения без понимания",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-SAFE03",
+    "title": "Общее пространство",
+    "competency": "SAFE3",
+    "prerequisites": [
+      "L-SAFE01"
+    ],
+    "goal": "Учитывать других людей и локальные ограничения",
+    "activity": "Выбрать разрешённую зону на оригинальном плане учебной площадки",
+    "acceptance": "Решение учитывает людей, видимость и заданные правила",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-SAFE04",
+    "title": "Границы самостоятельности",
+    "competency": "SAFE4",
+    "prerequisites": [
+      "L-SAFE01"
+    ],
+    "goal": "Отделить собственную проверку от задачи специалиста",
+    "activity": "Распределить карточки экипировка/самочувствие/погода по ответственным",
+    "acceptance": "Нет самостоятельной опасной настройки или медицинского заключения",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B01",
+    "title": "Опора в спокойном положении",
+    "competency": "B1",
+    "prerequisites": [
+      "L-SAFE01"
+    ],
+    "goal": "Различить согласованные признаки устойчивой позиции",
+    "activity": "Сопоставить две оригинальные статичные схемы",
+    "acceptance": "Выбор объяснён проверенными признаками; не по красоте позы",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B02",
+    "title": "Тело и опора",
+    "competency": "B2",
+    "prerequisites": [
+      "L-B01"
+    ],
+    "goal": "Соотнести положение тела и область опоры",
+    "activity": "Изменить учебный маркер на схеме вида сбоку",
+    "acceptance": "Объяснено ограничение схемы; нет вывода о реальном центре масс",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B03",
+    "title": "Что меняется при переносе нагрузки",
+    "competency": "B3",
+    "prerequisites": [
+      "L-B02"
+    ],
+    "goal": "Различить нагрузку и изображённую позу",
+    "activity": "Сравнить условные индикаторы под двумя опорами",
+    "acceptance": "Не смешаны положение и измеренная сила; модель названа условной",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B04",
+    "title": "Взгляд и окружающая обстановка",
+    "competency": "B4",
+    "prerequisites": [
+      "L-B01"
+    ],
+    "goal": "Отделить обзор от автоматического управления траекторией",
+    "activity": "Отметить точки внимания в коротком контексте",
+    "acceptance": "Замечены окружение и ограничения, без обещания куда смотришь туда едешь",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B05",
+    "title": "Опора при простой задаче",
+    "competency": "B5",
+    "prerequisites": [
+      "L-B03",
+      "L-B04",
+      "L-SAFE02"
+    ],
+    "goal": "Сохранить принятые признаки опоры в разрешённом упражнении",
+    "activity": "План экранной задачи и отдельная отметка инструктора",
+    "acceptance": "Цифровое выполнение не подменяет OBS; условия практики записаны",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-B06",
+    "title": "Когда устойчивость потеряна",
+    "competency": "B6",
+    "prerequisites": [
+      "L-B01",
+      "L-SAFE02"
+    ],
+    "goal": "Распознать проблему и изменить задачу",
+    "activity": "Разобрать последовательность условных кадров",
+    "acceptance": "Выбрано прекращение/упрощение с помощью, а не увеличение риска",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E01",
+    "title": "Носки, пятки и конфигурация лыж",
+    "competency": "E1",
+    "prerequisites": [
+      "L-B01",
+      "L-SAFE01"
+    ],
+    "goal": "Однозначно различать части лыжи и принятую конфигурацию",
+    "activity": "Собрать подписи на оригинальном виде сверху",
+    "acceptance": "Геометрия и подписи совпадают с утверждённым источником",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E02",
+    "title": "Кант в учебном разрезе",
+    "competency": "E2",
+    "prerequisites": [
+      "L-E01",
+      "L-B02"
+    ],
+    "goal": "Различить кант и условный контакт с поверхностью",
+    "activity": "Переключить два согласованных положения разреза",
+    "acceptance": "Названы упрощения; не выведена точная тормозная сила",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E03",
+    "title": "Контроль скорости как цель",
+    "competency": "E3",
+    "prerequisites": [
+      "L-E02",
+      "L-SAFE01"
+    ],
+    "goal": "Выбрать задачу с понятным условием контроля",
+    "activity": "Сравнить вымышленные планы короткой учебной задачи",
+    "acceptance": "Не выбрано усложнение до подтверждения предпосылок",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E04",
+    "title": "Проверяемая остановка",
+    "competency": "E4",
+    "prerequisites": [
+      "L-B05",
+      "L-E03",
+      "L-SAFE02"
+    ],
+    "goal": "Понять критерий наблюдаемой остановки",
+    "activity": "Согласовать контекст и затем получить OBS инструктора",
+    "acceptance": "Время/место/условия наблюдения записаны; критерии автора соблюдены",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E05",
+    "title": "Место для упражнения",
+    "competency": "E5",
+    "prerequisites": [
+      "L-E03",
+      "L-SAFE03"
+    ],
+    "goal": "Выбирать пространство с учётом других участников",
+    "activity": "Оценить оригинальную схему площадки с несколькими зонами",
+    "acceptance": "Решение объяснено условиями; приложение не выдаёт разрешение на реальный склон",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-E06",
+    "title": "Если контроль не подтверждён",
+    "competency": "E6",
+    "prerequisites": [
+      "L-E03",
+      "L-SAFE02"
+    ],
+    "goal": "Выбрать безопасный ответ на отсутствие контроля",
+    "activity": "Разобрать карточку признаков без показа опасного трюка",
+    "acceptance": "Следующий шаг не повышает скорость/сложность без допуска",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S01",
+    "title": "Линия пути и направление лыж",
+    "competency": "S1",
+    "prerequisites": [
+      "L-B01",
+      "L-SAFE01"
+    ],
+    "goal": "Различить траекторию и ориентацию",
+    "activity": "Разместить стрелки на плане сверху",
+    "acceptance": "Три сущности путь/ориентация/обзор не смешаны",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S02",
+    "title": "Внутренняя и внешняя стороны",
+    "competency": "S2",
+    "prerequisites": [
+      "L-S01",
+      "L-B03"
+    ],
+    "goal": "Определить стороны для конкретного направления",
+    "activity": "Зеркально переключить сцену и выбрать подписи",
+    "acceptance": "Ответ корректен при смене направления и системы отсчёта",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S03",
+    "title": "Нагрузка в контексте упражнения",
+    "competency": "S3",
+    "prerequisites": [
+      "L-S02",
+      "L-E04"
+    ],
+    "goal": "Соотнести учебную задачу и распределение нагрузки",
+    "activity": "Сопоставить условную схему и цель, затем обсуждение с инструктором",
+    "acceptance": "Нет универсальной формулы по одной картинке; физическая практика отдельно допущена",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S04",
+    "title": "Последовательность изменения направления",
+    "competency": "S4",
+    "prerequisites": [
+      "L-S03"
+    ],
+    "goal": "Различить фазы согласованного упражнения",
+    "activity": "Упорядочить оригинальные кадры и пояснить связь",
+    "acceptance": "Порядок принят автором для этого упражнения, не для всех поворотов",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S05",
+    "title": "Планирование безопасного пути",
+    "competency": "S5",
+    "prerequisites": [
+      "L-S01",
+      "L-E05"
+    ],
+    "goal": "Сопоставить путь и ограничения пространства",
+    "activity": "Выбрать допустимый учебный маршрут на плане",
+    "acceptance": "Объяснены границы и возможность отказаться от задачи",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-S06",
+    "title": "Если направление меняется без контроля",
+    "competency": "S6",
+    "prerequisites": [
+      "L-B06",
+      "L-E06",
+      "L-S01",
+      "L-SAFE02"
+    ],
+    "goal": "Выбрать возврат к нужной предпосылке",
+    "activity": "Рассмотреть сценарий и сопоставить недостающую компетенцию",
+    "acceptance": "Не выбран разгон/усложнение как замена контроля",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T01",
+    "title": "Как сообщить о трудности",
+    "competency": "T1",
+    "prerequisites": [
+      "L-SAFE02"
+    ],
+    "goal": "Формулировать непонимание или дискомфорт",
+    "activity": "Составить короткое сообщение из собственных вариантов",
+    "acceptance": "Есть понятный запрос и право прекратить, без оценки смелости",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T02",
+    "title": "Посильная следующая задача",
+    "competency": "T2",
+    "prerequisites": [
+      "L-T01",
+      "L-SAFE01"
+    ],
+    "goal": "Обсудить следующий шаг по подтверждённым предпосылкам",
+    "activity": "Выбрать цель из двух вымышленных назначений",
+    "acceptance": "Выбор связан с evidence, а не соревнованием скорости",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T03",
+    "title": "Договориться и проверить понимание",
+    "competency": "T3",
+    "prerequisites": [
+      "L-T01",
+      "L-SAFE02"
+    ],
+    "goal": "Согласовать цель и сигналы с инструктором",
+    "activity": "Ролевая карточка с пересказом задачи",
+    "acceptance": "Ученик может пересказать цель и способ запроса остановки",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T04",
+    "title": "Пауза и изменение плана",
+    "competency": "T4",
+    "prerequisites": [
+      "L-SAFE02",
+      "L-SAFE04"
+    ],
+    "goal": "Обозначить необходимость паузы/помощи",
+    "activity": "Разобрать несколько нейтральных ситуаций с изменившимися условиями",
+    "acceptance": "Нет требования продолжать через боль/выраженную усталость",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T05",
+    "title": "Уверенность и доказанный навык",
+    "competency": "T5",
+    "prerequisites": [
+      "L-T02"
+    ],
+    "goal": "Различить ощущение уверенности и наблюдённое умение",
+    "activity": "Сопоставить самооценку и журнал OBS",
+    "acceptance": "Расхождение не скрывается фиктивным процентом уверенности",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-T06",
+    "title": "Следующий шаг после занятия или перерыва",
+    "competency": "T6",
+    "prerequisites": [
+      "L-T05"
+    ],
+    "goal": "Составить план повторной проверки предпосылок",
+    "activity": "Собрать краткую карточку следующего занятия",
+    "acceptance": "Возврат опирается на актуальные наблюдения, не только старый статус",
+    "kind": "core",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P01",
+    "title": "Цель и предпосылки занятия",
+    "competency": "P1",
+    "prerequisites": [
+      "L-SAFE01",
+      "L-T02"
+    ],
+    "goal": "Формулировать наблюдаемую цель и условия",
+    "activity": "Составить оригинальный план для вымышленного ученика",
+    "acceptance": "Цель проверяема; перечислены границы допуска",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P02",
+    "title": "Наблюдение без поспешного диагноза",
+    "competency": "P2",
+    "prerequisites": [
+      "L-B06",
+      "L-S06"
+    ],
+    "goal": "Разделять увиденное и предположение",
+    "activity": "Разметить вымышленный журнал наблюдений",
+    "acceptance": "Каждый вывод отмечен как факт/гипотеза/вопрос",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P03",
+    "title": "Одна цель — разные возрастные подачи",
+    "competency": "P3",
+    "prerequisites": [
+      "L-T03"
+    ],
+    "goal": "Адаптировать объяснение без изменения безопасности",
+    "activity": "Написать свои короткие варианты для трёх аудиторий",
+    "acceptance": "Смысл/ограничения сохранены; нет заимствованных персонажей",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P04",
+    "title": "Проверка понимания и обратная связь",
+    "competency": "P4",
+    "prerequisites": [
+      "L-T01",
+      "L-T03"
+    ],
+    "goal": "Получить обратное объяснение задачи",
+    "activity": "Спроектировать диалог по вымышленной ситуации",
+    "acceptance": "Не используется унижение, давление или необоснованный диагноз",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P05",
+    "title": "План группы и распределение внимания",
+    "competency": "P5",
+    "prerequisites": [
+      "L-SAFE03",
+      "L-P01"
+    ],
+    "goal": "Соотнести состав группы, место и доступное наблюдение",
+    "activity": "Составить план для трёх вымышленных профилей",
+    "acceptance": "План не требует невозможного одновременного контроля",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P06",
+    "title": "Протокол наблюдаемого навыка",
+    "competency": "P6",
+    "prerequisites": [
+      "L-P02"
+    ],
+    "goal": "Фиксировать OBS и ограничения доказательства",
+    "activity": "Заполнить протокол на синтетических данных",
+    "acceptance": "Есть контекст, критерий, автор и время; нет выдуманного достижения",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P07",
+    "title": "Теоретическая проверка компетенций",
+    "competency": "P7",
+    "prerequisites": [
+      "L-P01"
+    ],
+    "goal": "Собрать blueprint и собственные проверочные задания",
+    "activity": "Связать компетенцию, сценарий и критерий ответа",
+    "acceptance": "Нет чужих экзаменационных формулировок и скрытой смены шкалы",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P08",
+    "title": "Практическая аттестация в пределах полномочий",
+    "competency": "P8",
+    "prerequisites": [
+      "L-P06",
+      "L-P07"
+    ],
+    "goal": "Применять утверждённую рубрику и проверять допуск",
+    "activity": "Разобрать синтетический протокол с неполными основаниями",
+    "acceptance": "Недостаточные evidence не превращаются в итоговый статус",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P09",
+    "title": "Решение изменить или остановить занятие",
+    "competency": "P9",
+    "prerequisites": [
+      "L-SAFE04",
+      "L-P05"
+    ],
+    "goal": "Распознавать границы безопасного продолжения",
+    "activity": "Разобрать оригинальный сценарий изменения условий",
+    "acceptance": "Есть основание, действие, коммуникация и запись решения",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P10",
+    "title": "Самостоятельный материал и права",
+    "competency": "P10",
+    "prerequisites": [
+      "L-P01"
+    ],
+    "goal": "Создать brief от своей цели без копирования курса",
+    "activity": "Составить карточку источников/прав и новый план объяснения",
+    "acceptance": "Нет скопированных таблиц/вопросов/структуры; provenance проверен",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P11",
+    "title": "Проверка схемы и перевода",
+    "competency": "P11",
+    "prerequisites": [
+      "L-P10"
+    ],
+    "goal": "Выявлять смысловые и визуальные противоречия",
+    "activity": "Сверить две собственные версии схемы и подписи",
+    "acceptance": "Замечания имеют locator и серьёзность; публикация блокируется по safety",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  },
+  {
+    "id": "L-P12",
+    "title": "Разбор занятия и профессиональный следующий шаг",
+    "competency": "P12",
+    "prerequisites": [
+      "L-P04",
+      "L-P06"
+    ],
+    "goal": "Отделить результат занятия от гипотезы об эффективности",
+    "activity": "Подготовить краткий разбор синтетического занятия",
+    "acceptance": "Выводы ограничены наблюдениями; следующий шаг проверяем",
+    "kind": "professional",
+    "status": "proposed_not_methodically_approved",
+    "source_use": "original_design_no_external_text_imported"
+  }
+]

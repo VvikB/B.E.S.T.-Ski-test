@@ -1,0 +1,463 @@
+{
+  "scope": "All user attachments present, tracked project source, previous generated deliverables; not dependency caches, credentials stores, Git objects, diagnostic scripts/logs. No external methodical dossier provided.",
+  "files": [
+    {
+      "id": "F001",
+      "path": "attachments/9ee6d559-b996-4bd1-bdfe-fde9f11e278a/Pasted text.txt",
+      "kind": "user_attachment",
+      "bytes": 10825,
+      "sha256": "a9ff1133a52f063c006f774518b4c7a4964233ac53c20ec96d7fa5628d6cb1c9"
+    },
+    {
+      "id": "F002",
+      "path": "attachments/b2432712-081c-4e49-b273-744da5f256f4/Pasted text.txt",
+      "kind": "user_attachment",
+      "bytes": 22217,
+      "sha256": "6b9d031c034342657ffd7fe40465d446e0ab86176b4f7b5ac8840f83bc84273b"
+    },
+    {
+      "id": "F003",
+      "path": "attachments/e03b45bc-d617-4dc4-870c-9e4fe2ae8454/Pasted text.txt",
+      "kind": "user_attachment",
+      "bytes": 10825,
+      "sha256": "a9ff1133a52f063c006f774518b4c7a4964233ac53c20ec96d7fa5628d6cb1c9"
+    },
+    {
+      "id": "F004",
+      "path": "best-exam-bot/.gitignore",
+      "kind": "legacy_repository_file",
+      "bytes": 235,
+      "sha256": "e2c404fe52278d2f42d85a201d4c24b2b2c648c4416763d98ac17678dcfb53f6"
+    },
+    {
+      "id": "F005",
+      "path": "best-exam-bot/Procfile",
+      "kind": "legacy_repository_file",
+      "bytes": 21,
+      "sha256": "541b723021eb7f1dcc53b3990a3671794e82daf29ac158f8a6a8a0be7e638540"
+    },
+    {
+      "id": "F006",
+      "path": "best-exam-bot/best_data.json",
+      "kind": "legacy_repository_file",
+      "bytes": 363199,
+      "sha256": "2f2f821fc57aafb7770985f898f7bcca9f03d8932e80c8ee4649a06592e870cf"
+    },
+    {
+      "id": "F007",
+      "path": "best-exam-bot/bot.py",
+      "kind": "legacy_repository_file",
+      "bytes": 41707,
+      "sha256": "082dc5cdbbf0ed0c3cfbd75b33e349c2cc705d71d36fa53b718a837a7ab49d44"
+    },
+    {
+      "id": "F008",
+      "path": "best-exam-bot/media/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F009",
+      "path": "best-exam-bot/media/en/exam/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F010",
+      "path": "best-exam-bot/media/en/guide/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F011",
+      "path": "best-exam-bot/media/en/scenarios/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F012",
+      "path": "best-exam-bot/media/en/theory/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F013",
+      "path": "best-exam-bot/media/es/exam/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F014",
+      "path": "best-exam-bot/media/es/guide/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F015",
+      "path": "best-exam-bot/media/es/scenarios/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F016",
+      "path": "best-exam-bot/media/es/theory/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F017",
+      "path": "best-exam-bot/media/ru/exmam/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F018",
+      "path": "best-exam-bot/media/ru/quide/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F019",
+      "path": "best-exam-bot/media/ru/scenarios/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F020",
+      "path": "best-exam-bot/media/ru/theory/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F021",
+      "path": "best-exam-bot/media/zh/exam/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F022",
+      "path": "best-exam-bot/media/zh/guide/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F023",
+      "path": "best-exam-bot/media/zh/scenarios/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F024",
+      "path": "best-exam-bot/media/zh/theory/.gitkeep",
+      "kind": "legacy_repository_file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "id": "F025",
+      "path": "best-exam-bot/planar-truck-502822-r0-a1f61617736f.json",
+      "kind": "legacy_repository_file",
+      "bytes": 2386,
+      "sha256": "5a6bf458096b9d8586b8fa487cdb04479b54649587810f7f4ecd1e06e90ec675"
+    },
+    {
+      "id": "F026",
+      "path": "best-exam-bot/requirements.txt",
+      "kind": "legacy_repository_file",
+      "bytes": 50,
+      "sha256": "d61b2fbab91a5b4fdee3f96708b11725b8a78754d55ae87054714a2a18eca312"
+    },
+    {
+      "id": "F027",
+      "path": "B.E.S.T.-Ski-test/BEST_ACADEMY_DESIGN_v2.zip",
+      "kind": "previous_generated_deliverable",
+      "bytes": 66161,
+      "sha256": "3a9432a46b2a95b7dfdd2c333c43ca5b2292f818b3927df199cb0d0ce95ed2d1"
+    },
+    {
+      "id": "F028",
+      "path": "B.E.S.T.-Ski-test/BEST_TECHNICAL_AUDIT_RU.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 47749,
+      "sha256": "abe30bda7fc3ef9e835aa075815ef74f1a613cc82ea772b7e974749b5bff8e47"
+    },
+    {
+      "id": "F029",
+      "path": "B.E.S.T.-Ski-test/BEST_TECHNICAL_AUDIT_RU.zip",
+      "kind": "previous_generated_deliverable",
+      "bytes": 14924,
+      "sha256": "567e504c2e655727a5620f6572a9a8c25b47c7ff968e6f3f79e6c30e331a376a"
+    },
+    {
+      "id": "F030",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_ARCHITECTURE_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 15436,
+      "sha256": "aaa9ea0f62cc5c7d376dbc3786b5b9eb955ee30de4ca20afd8503af46d9e0ab4"
+    },
+    {
+      "id": "F031",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_CONTENT_MODEL_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 12181,
+      "sha256": "fddc25f955d6f5cdb2fd585c9c379fa4f20881784a2da669bea45f7592e830f0"
+    },
+    {
+      "id": "F032",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_DATA_MODEL_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 12576,
+      "sha256": "e8ee54c4534d097276e745b550e5c3c001ee3625cf44a3a1abeab8ec062478da"
+    },
+    {
+      "id": "F033",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_DECISION_REGISTER_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 12021,
+      "sha256": "0eb3e54f6077e62dc60eee05561ddfc196cdcd43733532daf6870bc1f62a09d3"
+    },
+    {
+      "id": "F034",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_EXAM_REDESIGN_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 13879,
+      "sha256": "6a941ac50aefeb68fc64e8ddfa4f7ba0d8bc89c374b40512dfcb317ba65df869"
+    },
+    {
+      "id": "F035",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_MIGRATION_PLAN_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 11953,
+      "sha256": "c81a64e569ddebfcb875e7f6260a09a2f73f13dbe5900f5b38990f4500b5f9b4"
+    },
+    {
+      "id": "F036",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_PRODUCT_VISION_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 10952,
+      "sha256": "809fcb1ef48759654a935667bba777db2b1d2caea3b3d0ad9e55ea7e32d55182"
+    },
+    {
+      "id": "F037",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_QA_ACCEPTANCE_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 16333,
+      "sha256": "7ba7ec0c32b3951f2e7deae96436b15c31c638d2703330faec624ff7f0764419"
+    },
+    {
+      "id": "F038",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_ROADMAP_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 13768,
+      "sha256": "b7ae95cd8d0f444ef8b30198cd522bafafe63839650ba3da84bf3dd25ce4b389"
+    },
+    {
+      "id": "F039",
+      "path": "B.E.S.T.-Ski-test/docs/v2/BEST_UX_SCREEN_MAP_v2.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 17396,
+      "sha256": "78126ee661c4d48b0c0a3be58c6f7c90ef7c779c70b12028d463ffb877db3451"
+    },
+    {
+      "id": "F040",
+      "path": "audit-best/BEST_TECHNICAL_AUDIT_RU.md",
+      "kind": "previous_generated_deliverable",
+      "bytes": 47749,
+      "sha256": "abe30bda7fc3ef9e835aa075815ef74f1a613cc82ea772b7e974749b5bff8e47"
+    },
+    {
+      "id": "F041",
+      "path": "audit-best/BEST_TECHNICAL_AUDIT_RU.zip",
+      "kind": "previous_generated_deliverable",
+      "bytes": 14924,
+      "sha256": "567e504c2e655727a5620f6572a9a8c25b47c7ff968e6f3f79e6c30e331a376a"
+    }
+  ],
+  "exact_duplicate_groups": [
+    [
+      "F001",
+      "F003"
+    ],
+    [
+      "F008",
+      "F009",
+      "F010",
+      "F011",
+      "F012",
+      "F013",
+      "F014",
+      "F015",
+      "F016",
+      "F017",
+      "F018",
+      "F019",
+      "F020",
+      "F021",
+      "F022",
+      "F023",
+      "F024"
+    ],
+    [
+      "F028",
+      "F040"
+    ],
+    [
+      "F029",
+      "F041"
+    ]
+  ],
+  "archives": [
+    {
+      "file_id": "F027",
+      "path": "B.E.S.T.-Ski-test/BEST_ACADEMY_DESIGN_v2.zip",
+      "valid": true,
+      "members": [
+        {
+          "name": "BEST_TECHNICAL_AUDIT_RU.md",
+          "bytes": 47749,
+          "sha256": "abe30bda7fc3ef9e835aa075815ef74f1a613cc82ea772b7e974749b5bff8e47",
+          "matches_file_ids": [
+            "F028",
+            "F040"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_ARCHITECTURE_v2.md",
+          "bytes": 15436,
+          "sha256": "aaa9ea0f62cc5c7d376dbc3786b5b9eb955ee30de4ca20afd8503af46d9e0ab4",
+          "matches_file_ids": [
+            "F030"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_CONTENT_MODEL_v2.md",
+          "bytes": 12181,
+          "sha256": "fddc25f955d6f5cdb2fd585c9c379fa4f20881784a2da669bea45f7592e830f0",
+          "matches_file_ids": [
+            "F031"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_DATA_MODEL_v2.md",
+          "bytes": 12576,
+          "sha256": "e8ee54c4534d097276e745b550e5c3c001ee3625cf44a3a1abeab8ec062478da",
+          "matches_file_ids": [
+            "F032"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_DECISION_REGISTER_v2.md",
+          "bytes": 12021,
+          "sha256": "0eb3e54f6077e62dc60eee05561ddfc196cdcd43733532daf6870bc1f62a09d3",
+          "matches_file_ids": [
+            "F033"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_EXAM_REDESIGN_v2.md",
+          "bytes": 13879,
+          "sha256": "6a941ac50aefeb68fc64e8ddfa4f7ba0d8bc89c374b40512dfcb317ba65df869",
+          "matches_file_ids": [
+            "F034"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_MIGRATION_PLAN_v2.md",
+          "bytes": 11953,
+          "sha256": "c81a64e569ddebfcb875e7f6260a09a2f73f13dbe5900f5b38990f4500b5f9b4",
+          "matches_file_ids": [
+            "F035"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_PRODUCT_VISION_v2.md",
+          "bytes": 10952,
+          "sha256": "809fcb1ef48759654a935667bba777db2b1d2caea3b3d0ad9e55ea7e32d55182",
+          "matches_file_ids": [
+            "F036"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_QA_ACCEPTANCE_v2.md",
+          "bytes": 16333,
+          "sha256": "7ba7ec0c32b3951f2e7deae96436b15c31c638d2703330faec624ff7f0764419",
+          "matches_file_ids": [
+            "F037"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_ROADMAP_v2.md",
+          "bytes": 13768,
+          "sha256": "b7ae95cd8d0f444ef8b30198cd522bafafe63839650ba3da84bf3dd25ce4b389",
+          "matches_file_ids": [
+            "F038"
+          ]
+        },
+        {
+          "name": "docs/v2/BEST_UX_SCREEN_MAP_v2.md",
+          "bytes": 17396,
+          "sha256": "78126ee661c4d48b0c0a3be58c6f7c90ef7c779c70b12028d463ffb877db3451",
+          "matches_file_ids": [
+            "F039"
+          ]
+        }
+      ]
+    },
+    {
+      "file_id": "F029",
+      "path": "B.E.S.T.-Ski-test/BEST_TECHNICAL_AUDIT_RU.zip",
+      "valid": true,
+      "members": [
+        {
+          "name": "BEST_TECHNICAL_AUDIT_RU.md",
+          "bytes": 47749,
+          "sha256": "abe30bda7fc3ef9e835aa075815ef74f1a613cc82ea772b7e974749b5bff8e47",
+          "matches_file_ids": [
+            "F028",
+            "F040"
+          ]
+        }
+      ]
+    },
+    {
+      "file_id": "F041",
+      "path": "audit-best/BEST_TECHNICAL_AUDIT_RU.zip",
+      "valid": true,
+      "members": [
+        {
+          "name": "BEST_TECHNICAL_AUDIT_RU.md",
+          "bytes": 47749,
+          "sha256": "abe30bda7fc3ef9e835aa075815ef74f1a613cc82ea772b7e974749b5bff8e47",
+          "matches_file_ids": [
+            "F028",
+            "F040"
+          ]
+        }
+      ]
+    }
+  ],
+  "missing_claimed_sources": [
+    "BEST_CODEX_HANDOVER_REISSUED_20261105.zip",
+    "methodical manuals",
+    "lectures",
+    "external testing materials",
+    "additional learning sources"
+  ],
+  "note": "Private key files are inventoried by path/size/hash only. No credential values are included. ZIP members were inspected in memory without extraction."
+}
