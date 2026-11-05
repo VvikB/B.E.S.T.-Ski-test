@@ -5,11 +5,10 @@
 
  RUN  v3.2.7 /workspace/B.E.S.T.-Ski-test/academy-d01
 
- ✓ src/lab/motion.test.ts (8 tests) 17ms
- ✓ src/lab/rig.test.ts (14 tests) 336ms
+ ✓ src/lab/motion.test.ts (8 tests) 14ms
+ ✓ src/lab/rig.test.ts (14 tests) 247ms
 
  Test Files  2 passed (2)
       Tests  22 passed (22)
-   Start at  18:06:39
-   Duration  590ms (transform 120ms, setup 0ms, collect 162ms, tests 352ms, environment 0ms, prepare 96ms)
-
+   Start at  18:09:11
+   Duration  451ms (transform 95ms, setup 0ms, collect 128ms, tests 260ms, environment 0ms, prepare 71ms)

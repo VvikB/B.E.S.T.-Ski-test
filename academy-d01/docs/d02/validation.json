@@ -4,8 +4,8 @@
     "failed": 0
   },
   "browser": {
-    "startTime": "2026-11-05T18:06:19.703Z",
-    "duration": 92652.702,
+    "startTime": "2026-11-05T18:09:17.764Z",
+    "duration": 92123.129,
     "expected": 34,
     "skipped": 2,
     "unexpected": 0,

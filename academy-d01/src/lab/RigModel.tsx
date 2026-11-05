@@ -132,26 +132,26 @@ function SkiBoot({
 function GuideLabel({ point, text }: { point: Vec3; text: string }) {
   const texture = useMemo(() => {
     const canvas = document.createElement("canvas");
-    canvas.width = 512;
-    canvas.height = 96;
+    canvas.width = 256;
+    canvas.height = 128;
     const ctx = canvas.getContext("2d")!;
     ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, 512, 96);
+    ctx.fillRect(0, 0, 256, 128);
     ctx.strokeStyle = "#c5d4cc";
     ctx.lineWidth = 4;
-    ctx.strokeRect(2, 2, 508, 92);
-    ctx.font = "32px sans-serif";
+    ctx.strokeRect(2, 2, 252, 124);
+    ctx.font = "80px sans-serif";
     ctx.fillStyle = "#294b42";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(text, 256, 48);
+    ctx.fillText(text.split(" · ")[0], 128, 64);
     const t = new THREE.CanvasTexture(canvas);
     t.colorSpace = THREE.SRGBColorSpace;
     return t;
   }, [text]);
   useEffect(() => () => texture.dispose(), [texture]);
   return (
-    <sprite position={point} scale={[0.58, 0.109, 1]} renderOrder={5}>
+    <sprite position={point} scale={[0.32, 0.16, 1]} renderOrder={5}>
       <spriteMaterial map={texture} depthTest={false} depthWrite={false} />
     </sprite>
   );

@@ -1,0 +1,11 @@
+{
+  "unpacked_manifest": "passed",
+  "python3_start": "passed",
+  "routes": {
+    "ski": 200,
+    "kids": 200,
+    "pro": 200,
+    "lab": 200
+  },
+  "port": 4182
+}
