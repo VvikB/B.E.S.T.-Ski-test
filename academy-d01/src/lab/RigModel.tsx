@@ -147,12 +147,19 @@ function GuideLabel({ point, text }: { point: Vec3; text: string }) {
     ctx.fillText(text.split(" · ")[0], 128, 64);
     const t = new THREE.CanvasTexture(canvas);
     t.colorSpace = THREE.SRGBColorSpace;
+    t.minFilter = THREE.LinearFilter;
+    t.generateMipmaps = false;
     return t;
   }, [text]);
   useEffect(() => () => texture.dispose(), [texture]);
   return (
     <sprite position={point} scale={[0.32, 0.16, 1]} renderOrder={5}>
-      <spriteMaterial map={texture} depthTest={false} depthWrite={false} />
+      <spriteMaterial
+        map={texture}
+        depthTest={false}
+        depthWrite={false}
+        toneMapped={false}
+      />
     </sprite>
   );
 }

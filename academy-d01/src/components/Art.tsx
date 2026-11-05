@@ -1,109 +1,145 @@
-export function MountainArt({ kids = false }: { kids?: boolean }) {
+import { useId } from "react";
+export function AlpinePanorama({ kids = false }: { kids?: boolean }) {
+  const id = useId().replace(/:/g, "");
   return (
     <svg
-      className="mountain-art"
-      viewBox="0 0 580 390"
+      className="alpine-panorama"
+      viewBox="0 0 1000 340"
       role="img"
-      aria-label={
-        kids
-          ? "Оригинальная иллюстрация: лисёнок на фоне условных гор"
-          : "Оригинальная иллюстрация альпийского маршрута"
-      }
+      aria-label="Оригинальный альпийский пейзаж: снежные вершины, ледниковая долина и хвойный лес"
     >
       <defs>
-        <linearGradient id={kids ? "sky-k" : "sky-s"} x2="0" y2="1">
-          <stop stopColor={kids ? "#fce8cb" : "#dbe9e9"} />
-          <stop offset="1" stopColor="#f7faf8" />
+        <linearGradient id={id} x2="0" y2="1">
+          <stop stopColor={kids ? "#d8eaf2" : "#c4dfed"} />
+          <stop offset="1" stopColor="#f6fbff" />
+        </linearGradient>
+        <linearGradient id={id + "snow"} x2="1" y2="1">
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#c7dce8" />
         </linearGradient>
       </defs>
-      <rect
-        width="580"
-        height="390"
-        rx="26"
-        fill={`url(#${kids ? "sky-k" : "sky-s"})`}
-      />
-      <circle cx="452" cy="82" r="38" fill={kids ? "#f2b64e" : "#eab788"} />
+      <rect width="1000" height="340" fill={`url(#${id})`} />
+      <circle cx="820" cy="65" r="34" fill="#f1d6a2" />
       <path
-        d="M0 280 122 98 194 206 282 58 438 270 510 160 580 240V390H0Z"
-        fill="#9cb6b5"
+        d="M0 227 95 128 172 198 291 44 408 197 519 99 640 210 748 65 905 224 1000 141V340H0Z"
+        fill="#81a7bf"
       />
       <path
-        d="m87 150 35-52 72 108-47-26-23-42-15 27Zm142-19 53-73 59 80-37-18-22-27-21 46Z"
-        fill="#f9fcfa"
+        d="m172 198 119-154 117 153-62-47-33 12-28-68-47 78-28-8Zm468 12L748 65 905 224l-92-42-28 10-41-81-32 65-25-7Z"
+        fill="#f6fcff"
       />
-      <path d="M0 333 140 240 230 278 330 204 580 328V390H0Z" fill="#c7d7ce" />
-      <path d="M0 369 Q138 307 281 318 T580 371V390H0Z" fill="#f9fcfa" />
       <path
-        d="M316 239C440 277 166 285 263 328S396 354 331 386"
+        d="m291 44 117 153-62-47-33 12-28-68Zm457 21 157 159-92-42-28 10-41-81Z"
+        fill="#c2d7e6"
+      />
+      <path
+        d="M0 309 148 215 302 296 463 164 659 305 816 230 1000 305V340H0Z"
+        fill={`url(#${id + "snow"})`}
+      />
+      <path
+        d="m463 164 40 93 47 7 109 41-196-141ZM148 215l31 76 123 5Z"
+        fill="#a8c6d9"
+      />
+      <path d="M0 329Q240 286 441 316T1000 311V340H0" fill="#fff" />
+      <path
+        d="M654 291Q499 300 527 322T422 340"
         fill="none"
-        stroke="#e48a59"
+        stroke="#d1a25b"
         strokeWidth="3"
-        strokeDasharray="6 7"
+        strokeDasharray="5 9"
       />
-      {[58, 472, 514].map((x, i) => (
-        <g key={x} transform={`translate(${x} ${281 + i * 12})`}>
-          <path d="m0-39-19 38h38Zm0-22-14 27h28Z" fill="#40655c" />
-          <path d="M0 0v12" stroke="#40655c" strokeWidth="4" />
+      {[34, 70, 96, 865, 894, 930, 956].map((x, i) => (
+        <g key={x} transform={`translate(${x} ${300 + (i % 3) * 9})`}>
+          <path
+            d="m0-46-17 31h10l-16 25h46L7-15h10Z"
+            fill={i % 2 ? "#315b70" : "#477a8b"}
+          />
+          <path d="M0 5v15" stroke="#315b70" strokeWidth="4" />
         </g>
       ))}
-      {kids ? (
-        <g transform="translate(295 210)">
-          <path
-            d="m-39-26 7-61 31 33 33-33 8 61 12 40-50 40-54-40Z"
-            fill="#de8148"
-          />
-          <path d="m-28-25 27 18 28-18-11 49-18 12-17-13Z" fill="#fff3dc" />
-          <path d="m-27-63 4 25 11-9Zm47 0-3 25-10-9Z" fill="#70453c" />
-          <circle cx="-18" cy="-12" r="4" fill="#253e43" />
-          <circle cx="17" cy="-12" r="4" fill="#253e43" />
-          <path
-            d="m-6 8 5 5 6-5"
-            stroke="#253e43"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-          <path d="M-26 41Q0 25 27 41L44 92H-42Z" fill="#477773" />
-          <path
-            d="M-30 51 23 55"
-            stroke="#f2b64e"
-            strokeWidth="10"
-            strokeLinecap="round"
-          />
-        </g>
-      ) : (
-        <g transform="translate(300 247) rotate(14)">
-          <path
-            d="m-13 48 25-1m-17-4L-9 7 12 12 4 45"
-            fill="none"
-            stroke="#263d45"
-            strokeWidth="9"
-            strokeLinecap="round"
-          />
-          <path d="M-10 7-14-18 4-23 15 9Z" fill="#e78b58" />
-          <path
-            d="m-7-13-22 16m31-20 23 9"
-            stroke="#e78b58"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-          <circle cy="-37" r="12" fill="#263d45" />
-          <path
-            d="m-29 52 60-4m-53 13 62-4"
-            stroke="#477773"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-        </g>
-      )}
-      <circle
-        cx="316"
-        cy="239"
-        r="6"
-        fill="#e48a59"
-        stroke="white"
-        strokeWidth="3"
-      />
     </svg>
+  );
+}
+export function Bestik({ pose = "welcome" }: { pose?: "welcome" | "explain" }) {
+  return (
+    <svg
+      className={`bestik bestik-${pose}`}
+      viewBox="0 0 280 290"
+      role="img"
+      aria-label={
+        pose === "welcome"
+          ? "Бестик приветствует: оригинальный лисёнок в синем шарфе машет лапкой"
+          : "Бестик объясняет: оригинальный лисёнок указывает на две лыжи"
+      }
+    >
+      <ellipse cx="138" cy="272" rx="94" ry="10" fill="#c8dce8" />
+      <path d="M166 221Q264 243 253 164q-50 9-65 46" fill="#d46b31" />
+      <path d="M253 164q-7 43-34 49l-12-19q19-23 46-30" fill="#fff3e3" />
+      <path d="M95 182q43-21 83 0l12 68H83Z" fill="#ef9751" />
+      <path d="M111 199q25-14 51 0l11 47h-70Z" fill="#fff3e3" />
+      <path d="m100 241-9 22h32l5-19m25-1 1 20h34l-12-23" fill="#173d58" />
+      <path
+        d="M85 191 60 210 46 192"
+        fill="none"
+        stroke="#de813c"
+        strokeWidth="20"
+        strokeLinecap="round"
+      />
+      {pose === "welcome" ? (
+        <path
+          d="M180 191q35-25 23-55"
+          fill="none"
+          stroke="#de813c"
+          strokeWidth="20"
+          strokeLinecap="round"
+        />
+      ) : (
+        <>
+          <path
+            d="m180 195 37 11 20-13"
+            fill="none"
+            stroke="#de813c"
+            strokeWidth="20"
+            strokeLinecap="round"
+          />
+          <path
+            d="M216 236h44m-44 13h44"
+            stroke="#173d58"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+        </>
+      )}
+      <path
+        d="M72 88 74 24 116 59q23-6 47 0l42-35 3 68 19 53-85 51-90-51Z"
+        fill="#e68941"
+      />
+      <path d="m85 48 2 45 22-22m84-23-2 45-22-22" fill="#8c422b" />
+      <path d="m70 118 65 29 72-29-12 39-54 27-56-27Z" fill="#fff4e5" />
+      <ellipse cx="107" cy="116" rx="7" ry="10" fill="#173d58" />
+      <ellipse cx="170" cy="116" rx="7" ry="10" fill="#173d58" />
+      <circle cx="109" cy="113" r="2.5" fill="white" />
+      <circle cx="172" cy="113" r="2.5" fill="white" />
+      <path d="m130 144 10 9 11-9q-11-9-21 0" fill="#173d58" />
+      <path
+        d="M129 163q11 9 22-1"
+        fill="none"
+        stroke="#8c422b"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <path d="M89 179q48 25 100 0l-6 21q-47 20-93-1Z" fill="#1b5878" />
+      <path d="m167 197 14 29 19-9-18-29" fill="#1b5878" />
+      <path d="m179 213 17-7" stroke="#d8b575" strokeWidth="4" />
+    </svg>
+  );
+}
+export function MountainArt({ kids = false }: { kids?: boolean }) {
+  return (
+    <div className={`mountain-scene ${kids ? "fox-scene" : ""}`}>
+      <AlpinePanorama kids={kids} />
+      {kids && <Bestik />}
+    </div>
   );
 }
 export function SkiViews({

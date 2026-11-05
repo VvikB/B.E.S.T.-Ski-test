@@ -12,64 +12,93 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { DemoTag, Modal, PageTitle } from "../components/Ui";
-import { MountainArt } from "../components/Art";
+import { AlpinePanorama } from "../components/Art";
+import { BalancePreview, usePreview } from "../components/BalancePreview";
 const routeSteps = [
   "Познакомиться с маршрутом",
   "Исследовать модель опоры",
   "Разобрать наблюдение",
 ];
 export default function SkiPage() {
+  const { state: preview } = usePreview();
+  const [overview, setOverview] = useState<
+    "demo" | "progress" | "profile" | null
+  >(null);
+  const labUrl = `/lab?scenario=balance&frame=${preview.frame}&view=${preview.view}`;
+  const material = { publication: "draft", audience: "demo" } as const;
+  const progress = { mode: "demo", persistent: false } as const;
   const [routeOpen, setRouteOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
   const [checked, setChecked] = useState<number[]>([]);
   const [competency, setCompetency] = useState<string | null>(null);
   return (
     <>
-      <PageTitle
-        eyebrow="B.E.S.T. SKI / МОЯ АКАДЕМИЯ"
-        title="У каждого движения есть начало."
-        text="Ваше пространство, чтобы понимать, исследовать и двигаться осознанно."
-        action={<DemoTag />}
-      />
-      <section className="ski-hero">
-        <div className="hero-copy">
-          <span className="overline">
-            <span className="little-line" />
-            ВАШ ПЕРВЫЙ МАРШРУТ
-          </span>
+      <div className="ski-intro">
+        <AlpinePanorama />
+        <PageTitle
+          eyebrow="B.E.S.T. SKI / МОЯ АКАДЕМИЯ"
+          title="Мой маршрут"
+          text="Увидеть. Понять. Обсудить с инструктором."
+        />
+      </div>
+
+      <section
+        className="continue-card"
+        id="continue"
+        data-publication={material.publication}
+        data-progress={progress.mode}
+      >
+        <div className="continue-copy">
+          <span className="overline">ВАШ СЛЕДУЮЩИЙ ШАГ / BALANCE</span>
           <h2>
-            Сначала контроль.
+            Продолжить
             <br />
-            Потом —<br />
-            <em>уверенность.</em>
+            обучение
           </h2>
+          <p className="lesson-name">B-01 · Устойчивая стойка</p>
           <p>
-            Начните с Balance: изучите пространство опоры и посмотрите на
-            движение с новой стороны.
+            Наблюдайте положение корпуса, коленей и лыж. Сравните состояния
+            одной модели с разных сторон.
           </p>
-          <button className="button dark" onClick={() => setRouteOpen(true)}>
-            Открыть маршрут
-            <ArrowUpRight size={18} />
-          </button>
-          <div className="hero-meta">
-            <ShieldCheck size={15} />
-            Учебный маршрут находится в проекте
+          <span className="draft-chip publication-chip">
+            Методический черновик
+          </span>
+          <div className="continue-actions">
+            <button className="button dark" onClick={() => setOverview("demo")}>
+              Открыть демонстрацию
+              <ArrowRight size={18} />
+            </button>
+            <Link className="button outline" to={labUrl}>
+              Открыть 3D Lab
+              <ArrowUpRight size={18} />
+            </Link>
           </div>
-        </div>
-        <div className="hero-art">
-          <MountainArt />
-          <div className="art-coordinate">
-            B / BALANCE <span>01 — ИССЛЕДОВАНИЕ</span>
-          </div>
-          <div className="floating-art-label">
-            <div className="label-square">B</div>
+          <div className="lesson-meta">
             <span>
-              Найдите свою опору<small>Технический обзор · не инструкция</small>
+              <Clock3 size={16} />
+              8–12 минут теории · ориентир
             </span>
           </div>
+          <p className="publication-note">
+            Урок ещё не опубликован. Сейчас доступна техническая демонстрация, а
+            не обучение технике катания.
+          </p>
+          <DemoTag />
+          <span className="storage-note">
+            <ShieldCheck size={16} />
+            Без аккаунта и постоянного прогресса
+          </span>
         </div>
+        <BalancePreview />
       </section>
-      <div className="section-heading">
+      <nav className="learning-nav" aria-label="Учебная навигация">
+        <a href="#continue">Обучение</a>
+        <a href="#best-sections">Разделы B.E.S.T.</a>
+        <Link to={labUrl}>3D Lab</Link>
+        <button onClick={() => setOverview("progress")}>Мой прогресс</button>
+        <button onClick={() => setOverview("profile")}>Демо-профиль</button>
+      </nav>
+      <div id="best-sections" className="section-heading">
         <h2>Четыре части одного движения</h2>
         <span>Методика B.E.S.T.</span>
       </div>
@@ -101,9 +130,7 @@ export default function SkiPage() {
             </div>
             <h3>{c.name}</h3>
             <p>{c.ru}</p>
-            <div className="mini-progress">
-              <span />
-            </div>
+
             <small>Проект программы</small>
           </button>
         ))}
@@ -138,7 +165,7 @@ export default function SkiPage() {
             ))}
           </div>
           <button className="text-button" onClick={() => setRouteOpen(true)}>
-            Посмотреть шаги
+            Открыть маршрут
             <ArrowRight size={17} />
           </button>
         </section>
@@ -178,6 +205,50 @@ export default function SkiPage() {
           <ArrowRight size={17} />
         </button>
       </section>
+      {overview && (
+        <Modal
+          title={
+            overview === "demo"
+              ? "Balance · доступная демонстрация"
+              : overview === "progress"
+                ? "Мой прогресс · демо"
+                : "Профиль · демонстрационный режим"
+          }
+          onClose={() => setOverview(null)}
+        >
+          {overview === "demo" ? (
+            <>
+              <p>
+                Выберите ракурс и состояние. Это технический просмотр модели;
+                полный урок B-01 ожидает методической приёмки.
+              </p>
+              <BalancePreview />
+              <Link className="button dark" to={labUrl}>
+                Продолжить в Motion Lab
+                <ArrowUpRight size={16} />
+              </Link>
+            </>
+          ) : (
+            <>
+              <p>
+                Вы не вошли в учётную запись. Backend и постоянное хранение пока
+                не подключены. Просмотр схемы не означает освоение теории или
+                практики.
+              </p>
+              <p>
+                Выбор ракурса и состояния хранится только в памяти этой вкладки
+                до перезагрузки. Реальных результатов учеников здесь нет.
+              </p>
+              {overview === "progress" && (
+                <p>
+                  Публикация B-01: черновик. Прогресс ученика: не подтверждён.
+                  Практика: не назначена.
+                </p>
+              )}
+            </>
+          )}
+        </Modal>
+      )}
       {routeOpen && (
         <Modal
           title="Balance · интерфейсный маршрут"
@@ -230,8 +301,8 @@ export default function SkiPage() {
             инструктора. <strong>ASSESS</strong> — отдельная аттестация.
           </p>
           <p>
-            В D0.1 нет реальных назначений, учебного допуска и сертификатов.
-            Пилот с сохранением данных будет отдельным этапом P0.1.
+            В D0.3 нет реальных назначений, учебного допуска и сертификатов.
+            Урок P0.1 и хранение P0.2 остаются отдельными этапами.
           </p>
         </Modal>
       )}
@@ -242,12 +313,12 @@ export default function SkiPage() {
         >
           <p>
             Раздел входит в проектную программу B.E.S.T. Academy. Сейчас
-            доступна нейтральная техническая лаборатория; методически принятые
-            уроки ещё не публиковались.
+            доступны технические сценарии B/E/S/T; методически принятые уроки
+            ещё не публиковались.
           </p>
           <Link
             className="button outline"
-            to="/lab"
+            to={`/lab?scenario=${({ Balance: "balance", "Edge Control": "edge", Steering: "steering", Trust: "trust" } as Record<string, string>)[competency]}&frame=0`}
             onClick={() => setCompetency(null)}
           >
             Открыть лабораторию

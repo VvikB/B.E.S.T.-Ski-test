@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { mkdir } from "node:fs/promises";
 import { sampleMotion } from "../src/lab/rig";
 import type { ScenarioId } from "../src/lab/rig";
 
@@ -21,6 +20,12 @@ test("D02 scenarios, guides, shared SVG coordinates and static comparison", asyn
     await page
       .getByRole("button", { name: "Рекомендуемый ракурс", exact: true })
       .click();
+    if (
+      !(await page
+        .locator(".observation-disclosure")
+        .evaluate((el) => (el as HTMLDetailsElement).open))
+    )
+      await page.locator(".observation-disclosure summary").click();
     await page
       .getByRole("checkbox", { name: "Суставы и сегменты", exact: true })
       .check();
@@ -37,10 +42,6 @@ test("D02 scenarios, guides, shared SVG coordinates and static comparison", asyn
       id,
     );
     await page.waitForTimeout(350);
-    await mkdir("docs/d02/media", { recursive: true });
-    await page
-      .getByTestId("scene")
-      .screenshot({ path: `docs/d02/media/${id}-${info.project.name}.png` });
     await page.getByRole("button", { name: "SVG", exact: true }).click();
     const expected = sampleMotion(60, id).joints.leftKnee;
     const joint = page.locator('[data-joint="leftKnee"]').first();
@@ -67,7 +68,7 @@ test("D02 scenarios, guides, shared SVG coordinates and static comparison", asyn
   await page.getByRole("button", { name: "Камера сбоку", exact: true }).click();
   await page
     .getByTestId("scene")
-    .screenshot({ path: `docs/d02/media/ab-side-${info.project.name}.png` });
+    .screenshot({ path: `docs/d03/media/ab-side-${info.project.name}.png` });
   await scenario.selectOption("balance");
   await expect(
     page.getByRole("switch", { name: "Сравнить A и B" }),
@@ -77,14 +78,11 @@ test("D02 scenarios, guides, shared SVG coordinates and static comparison", asyn
 });
 
 test("D02 four scenario demonstration recording", async ({ browser }, info) => {
-  test.skip(
-    info.project.name.startsWith("mobile"),
-    "One desktop recording; mobile interactions tested separately.",
-  );
+  test.skip(true, "D0.3: no repeat video requested.");
   const context = await browser.newContext({
     viewport: { width: 1280, height: 900 },
     recordVideo: {
-      dir: "docs/d02/media/recordings",
+      dir: "docs/d03/media/recordings",
       size: { width: 1280, height: 900 },
     },
   });
@@ -107,5 +105,5 @@ test("D02 four scenario demonstration recording", async ({ browser }, info) => {
   }
   const video = page.video();
   await context.close();
-  await video!.saveAs("docs/d02/media/D02-scenarios.webm");
+  await video!.saveAs("docs/d03/media/D02-scenarios.webm");
 });

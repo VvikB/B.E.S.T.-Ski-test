@@ -1,4 +1,4 @@
-"""Serve the built D0.2 locally without Node.js. Not a production/auth server."""
+"""Serve the built D0.3 locally without Node.js. Not a production/auth server."""
 from argparse import ArgumentParser
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -27,7 +27,7 @@ def main():
         parser.error('No dist/index.html. Run npm run build or use the runnable release archive.')
     handler = partial(DemoHandler, directory=str(directory))
     server = ThreadingHTTPServer((args.host, args.port), handler)
-    print(f'D0.2 technical demo: http://{args.host}:{args.port}/ski', flush=True)
+    print(f'D0.3 technical demo: http://{args.host}:{args.port}/ski', flush=True)
     print('Synthetic data only; no authentication. Use only a trusted local network.', flush=True)
     try:
         server.serve_forever()

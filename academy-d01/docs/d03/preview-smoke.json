@@ -1,0 +1,9 @@
+{
+  "manifest": "passed",
+  "python3_static_routes": {
+    "ski": 200,
+    "kids": 200,
+    "pro": 200,
+    "lab": 200
+  }
+}

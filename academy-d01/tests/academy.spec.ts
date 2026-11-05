@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { createHash } from "node:crypto";
 import { mkdir, rename, writeFile } from "node:fs/promises";
 import type { Page } from "@playwright/test";
-const artifacts = "docs/d02/media";
+const artifacts = "docs/d03/media";
 async function scrub(page: Page, frame: number) {
   const slider = page.getByRole("slider", { name: "Кадр на временной шкале" });
   await slider.fill(String(frame));
@@ -41,7 +41,7 @@ test("three real spaces render without script errors or horizontal overflow", as
   for (const route of ["kids", "ski", "pro"]) {
     await page.goto(`/${route}`);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(page.getByText("Пример данных · D0.2")).toBeVisible();
+    await expect(page.getByText("Пример данных · D0.3")).toBeVisible();
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(
@@ -333,8 +333,8 @@ test("record reproducible Motion Lab demonstration", async ({
   browser,
 }, info) => {
   test.skip(
-    info.project.name.startsWith("mobile"),
-    "One desktop recording; mobile is covered by the functional cases, not real-device proof.",
+    true,
+    "D0.3: no repeat video requested; controls tested separately.",
   );
   await mkdir(artifacts, { recursive: true });
   const context = await browser.newContext({
@@ -449,7 +449,7 @@ test("automated WCAG checks on all four routes", async ({ page }, info) => {
     });
   }
   await writeFile(
-    `docs/d02/accessibility-${info.project.name}.json`,
+    `docs/d03/accessibility-${info.project.name}.json`,
     JSON.stringify(results, null, 2),
   );
   expect(

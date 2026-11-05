@@ -1,0 +1,28 @@
+
+Running 14 tests using 1 worker
+
+(node:90079) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:90079) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop-chromium] › tests/academy.spec.ts:26:1 › three real spaces render without script errors or horizontal overflow (3.2s)
+  ✓   2 [desktop-chromium] › tests/academy.spec.ts:108:1 › Ski route checklist works and makes no claim of real saved progress (1.9s)
+  ✓   3 [desktop-chromium] › tests/academy.spec.ts:491:1 › automated WCAG checks on all four routes (3.5s)
+  ✓   4 [desktop-chromium] › tests/d03.spec.ts:3:1 › D03 shared mini-scheme, keyboard, labels, focus and Lab handoff retain state (2.3s)
+  ✓   5 [desktop-chromium] › tests/d03.spec.ts:56:1 › D03 demo lesson, progress and profile explain status without WebGL (3.2s)
+  ✓   6 [desktop-chromium] › tests/d03.spec.ts:88:1 › D03 320/390 portrait, 844 landscape and 200% text reflow on all spaces (3.7s)
+  ✓   7 [desktop-chromium] › tests/d03.spec.ts:131:1 › D03 reduced motion and large primary controls; original Bestik has two poses (1.4s)
+(node:90497) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:90497) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [mobile-chromium] › tests/academy.spec.ts:26:1 › three real spaces render without script errors or horizontal overflow (4.5s)
+  ✓   9 [mobile-chromium] › tests/academy.spec.ts:108:1 › Ski route checklist works and makes no claim of real saved progress (917ms)
+  ✓  10 [mobile-chromium] › tests/academy.spec.ts:491:1 › automated WCAG checks on all four routes (3.0s)
+  ✓  11 [mobile-chromium] › tests/d03.spec.ts:3:1 › D03 shared mini-scheme, keyboard, labels, focus and Lab handoff retain state (1.7s)
+  ✓  12 [mobile-chromium] › tests/d03.spec.ts:56:1 › D03 demo lesson, progress and profile explain status without WebGL (1.3s)
+  -  13 [mobile-chromium] › tests/d03.spec.ts:88:1 › D03 320/390 portrait, 844 landscape and 200% text reflow on all spaces
+  ✓  14 [mobile-chromium] › tests/d03.spec.ts:131:1 › D03 reduced motion and large primary controls; original Bestik has two poses (1.2s)
+
+  1 skipped
+  13 passed (33.6s)

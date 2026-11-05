@@ -9,6 +9,7 @@ import {
   Plus,
   Users,
 } from "lucide-react";
+import { AlpinePanorama } from "../components/Art";
 import { DemoTag, Modal, PageTitle } from "../components/Ui";
 const learners = [
   {
@@ -46,13 +47,16 @@ export default function ProPage() {
   const [plan, setPlan] = useState<string[]>([]);
   const visible = group === "balance" ? learners : learners.slice(1);
   return (
-    <>
-      <PageTitle
-        eyebrow="B.E.S.T. PRO / КАБИНЕТ ИНСТРУКТОРА"
-        title="За каждым шагом — внимание."
-        text="Планируйте, наблюдайте, обсуждайте. Сохраняйте границы каждого вывода."
-        action={<DemoTag />}
-      />
+    <div className="pro-space">
+      <div className="pro-heading">
+        <AlpinePanorama />
+        <PageTitle
+          eyebrow="B.E.S.T. PRO / КАБИНЕТ ИНСТРУКТОРА"
+          title="Кабинет инструктора"
+          text="Планируйте, наблюдайте, обсуждайте. Сохраняйте границы каждого вывода."
+          action={<DemoTag />}
+        />
+      </div>
       <div className="pro-summary">
         <section className="summary-item">
           <span className="summary-icon sage">
@@ -131,32 +135,6 @@ export default function ProPage() {
             нет.
           </p>
         </section>
-        <aside className="panel plan-panel">
-          <span className="card-kicker">
-            <CalendarDays size={17} />
-            ПЛАН ВСТРЕЧИ
-          </span>
-          <h2>
-            Знакомство
-            <br />с Balance
-          </h2>
-          <p>Согласовать цель, рассмотреть модель, обсудить наблюдение.</p>
-          <div className="plan-line">
-            <span>01</span>Цель и условия
-          </div>
-          <div className="plan-line">
-            <span>02</span>Модель и вопросы
-          </div>
-          <div className="plan-line">
-            <span>03</span>Следующий шаг
-          </div>
-          <button className="text-button" onClick={() => setModal("plan")}>
-            Открыть план
-            <ArrowRight size={17} />
-          </button>
-        </aside>
-      </div>
-      <div className="two-cards pro-bottom">
         <section className="panel observation-panel">
           <span className="card-kicker">
             <MessageSquareText size={17} />
@@ -204,6 +182,32 @@ export default function ProPage() {
             </span>
           </div>
         </section>
+      </div>
+      <div className="two-cards pro-bottom">
+        <aside className="panel plan-panel">
+          <span className="card-kicker">
+            <CalendarDays size={17} />
+            ПЛАН ВСТРЕЧИ
+          </span>
+          <h2>
+            Знакомство
+            <br />с Balance
+          </h2>
+          <p>Согласовать цель, рассмотреть модель, обсудить наблюдение.</p>
+          <div className="plan-line">
+            <span>01</span>Цель и условия
+          </div>
+          <div className="plan-line">
+            <span>02</span>Модель и вопросы
+          </div>
+          <div className="plan-line">
+            <span>03</span>Следующий шаг
+          </div>
+          <button className="text-button" onClick={() => setModal("plan")}>
+            Открыть план
+            <ArrowRight size={17} />
+          </button>
+        </aside>
         <section className="panel method-card">
           <span className="card-kicker">
             <FileCheck2 size={17} />
@@ -279,6 +283,6 @@ export default function ProPage() {
           </dl>
         </Modal>
       )}
-    </>
+    </div>
   );
 }

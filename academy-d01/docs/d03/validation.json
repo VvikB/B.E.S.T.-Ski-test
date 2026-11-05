@@ -1,0 +1,52 @@
+{
+  "version": "0.3.0",
+  "base_commit": "90d4d1b",
+  "unit_passed": 22,
+  "full_regression": {
+    "startTime": "2026-11-05T22:53:26.123Z",
+    "duration": 105154.414,
+    "expected": 39,
+    "skipped": 5,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "final_targeted_after_Ski_layout": {
+    "startTime": "2026-11-05T22:56:38.356Z",
+    "duration": 33596.512,
+    "expected": 13,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "https_tests_passed": 7,
+  "typescript": "passed in production build",
+  "format": "passed",
+  "build": "passed",
+  "axe_violations": 0,
+  "viewports": [
+    [
+      320,
+      740
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      390,
+      664
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "enlarged_text": "2x computed CSS font sizes; not physical iOS Dynamic Type",
+  "production_files": 16,
+  "motion_math_and_SVG_projection_unchanged": true,
+  "D02_owner_iPhone_launch_confirmed": true,
+  "D02_full_I01_I10_confirmed": false,
+  "D03_physical_iPhone_tested": false,
+  "methodical_approval": false,
+  "public_hosting": "not deployed: old key revocation confirmation pending"
+}

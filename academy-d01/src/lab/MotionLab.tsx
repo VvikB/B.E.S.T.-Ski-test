@@ -32,6 +32,7 @@ import { Link } from "react-router-dom";
 import { DemoTag, Modal, PageTitle } from "../components/Ui";
 import {
   LAST_FRAME,
+  clampFrame,
   poseAtFrame,
   resolveQuality,
   SAMPLE_RATE,
@@ -73,8 +74,24 @@ const cameraButtons = [
   { id: "front", name: "Спереди", label: "Камера спереди", icon: UserRound },
 ] as const;
 export default function MotionLab() {
-  const [frame, setFrame] = useState(0);
-  const [scenario, setScenario] = useState<ScenarioId>("balance");
+  const params = new URLSearchParams(window.location.search);
+  const requestedScenario = params.get("scenario") as ScenarioId;
+  const startScenario = SCENARIOS.some((s) => s.id === requestedScenario)
+    ? requestedScenario
+    : "balance";
+  const requestedFrame = Number(params.get("frame") ?? 0);
+  const startFrame = Number.isFinite(requestedFrame)
+    ? clampFrame(requestedFrame)
+    : 0;
+  const requestedView = params.get("view");
+  const startView: CameraView =
+    requestedView === "side" ||
+    requestedView === "front" ||
+    requestedView === "top"
+      ? requestedView
+      : "orbit";
+  const [frame, setFrame] = useState(startFrame);
+  const [scenario, setScenario] = useState<ScenarioId>(startScenario);
   const [guides, setGuides] = useState<Guides>({
     joints: false,
     body: false,
@@ -84,7 +101,7 @@ export default function MotionLab() {
   const selectedScenario = SCENARIOS.find((s) => s.id === scenario)!;
   const [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
-  const [view, setView] = useState<CameraView>("orbit");
+  const [view, setView] = useState<CameraView>(startView);
   const [reset, setReset] = useState(0);
   const [rotation, setRotation] = useState(0);
   const [mode, setMode] = useState<RenderMode>("3d");
@@ -453,14 +470,21 @@ export default function MotionLab() {
             <ScanLine size={17} />
             ИНСТРУМЕНТЫ НАБЛЮДЕНИЯ
           </span>
-          <ObservationTools
-            guides={guides}
-            onGuides={setGuides}
-            marker={marker}
-            onMarker={setMarker}
-            frame={frame}
-            scenario={scenario}
-          />
+          <details className="observation-disclosure" open={!compact}>
+            <summary>Ориентиры и отслеживаемая точка</summary>
+            <p className="guide-legend">
+              P — таз · C — корпус · Kₗ — колено · Aₗ — голеностоп · Eᵣ — локоть
+              · Wᵣ — кисть · Lₛ/Rₛ — лыжи. R — начало модели, не центр масс.
+            </p>
+            <ObservationTools
+              guides={guides}
+              onGuides={setGuides}
+              marker={marker}
+              onMarker={setMarker}
+              frame={frame}
+              scenario={scenario}
+            />
+          </details>
           <div className="setting-row">
             <div>
               <h3>

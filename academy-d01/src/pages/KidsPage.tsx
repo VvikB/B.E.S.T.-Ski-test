@@ -9,7 +9,7 @@ import {
   Star,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { MountainArt, SkiViews } from "../components/Art";
+import { MountainArt, SkiViews, Bestik } from "../components/Art";
 import { DemoTag, Modal, PageTitle } from "../components/Ui";
 export default function KidsPage() {
   const [choice, setChoice] = useState<"top" | "side" | null>(null);
@@ -19,8 +19,8 @@ export default function KidsPage() {
     <div className="kids-space">
       <PageTitle
         eyebrow="B.E.S.T. KIDS / МАЛЕНЬКИЕ ОТКРЫТИЯ"
-        title="Привет! Посмотрим по-новому?"
-        text="Одна маленькая задача. Целый мир новых наблюдений."
+        title="Привет, я Бестик!"
+        text="Давай посмотрим на лыжи по-новому."
         action={<DemoTag />}
       />
       <section className="kids-hero">
@@ -30,17 +30,9 @@ export default function KidsPage() {
             ТВОЙ СЛЕДУЮЩИЙ ШАГ
           </span>
           <h2>
-            Большое открытие
-            <br />
-            начинается
-            <br />
-            <em>с любопытства.</em>
+            Новое <em>открытие.</em>
           </h2>
-          <p>
-            Это Рыжик — наш собственный персонаж.
-            <br />
-            Он любит смотреть на вещи с разных сторон.
-          </p>
+          <p>Я люблю смотреть на вещи с разных сторон. Попробуем вместе?</p>
           <a className="button dark" href="#kids-task">
             Попробуем вместе
             <ArrowRight size={18} />
@@ -137,6 +129,7 @@ export default function KidsPage() {
             </button>
           </section>
           <section className="panel little-lab">
+            <Bestik pose="explain" />
             <span className="card-kicker">НОВАЯ ПЕРСПЕКТИВА</span>
             <h3>А если модель повернуть?</h3>
             <p>В лаборатории это возможно. Вместе со взрослым.</p>

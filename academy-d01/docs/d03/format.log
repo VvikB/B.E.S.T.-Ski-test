@@ -1,0 +1,6 @@
+
+> best-academy-d01@0.3.0 format:check
+> prettier --check src tests *.ts *.json index.html
+
+Checking formatting...
+All matched files use Prettier code style!

@@ -51,7 +51,7 @@ function CameraRig({
   compare: boolean;
 }) {
   const controls = useRef<ComponentRef<typeof OrbitControls>>(null);
-  const { camera, invalidate } = useThree();
+  const { camera, invalidate, size } = useThree();
   useEffect(() => {
     camera.position.set(...cameraPosition(view, compare));
     if (view === "orbit")
@@ -60,13 +60,33 @@ function CameraRig({
         rotation * 0.25,
       );
     camera.up.set(0, view === "top" ? 0 : 1, view === "top" ? -1 : 0);
+    if (camera instanceof THREE.OrthographicCamera) {
+      camera.zoom = Math.max(
+        25,
+        Math.min(
+          (size.height - 90) / 1.9,
+          (size.width - 40) / (compare ? 3.7 : 1.7),
+          compare ? 110 : 160,
+        ),
+      );
+      camera.updateProjectionMatrix();
+    }
     camera.lookAt(0, 1, 0);
     if (controls.current) {
       controls.current.target.set(0, 1, 0);
       controls.current.update();
     }
     invalidate();
-  }, [view, reset, rotation, compare, camera, invalidate]);
+  }, [
+    view,
+    reset,
+    rotation,
+    compare,
+    camera,
+    invalidate,
+    size.width,
+    size.height,
+  ]);
   return (
     <OrbitControls
       ref={controls}
@@ -118,7 +138,7 @@ export default function SkierScene(props: Props) {
         <PerspectiveCamera
           makeDefault
           position={cameraPosition(view, compare)}
-          fov={36}
+          fov={compare ? 36 : 30}
         />
       ) : (
         <OrthographicCamera

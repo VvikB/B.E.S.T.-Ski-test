@@ -1,0 +1,14 @@
+
+> best-academy-d01@0.3.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/B.E.S.T.-Ski-test/academy-d01
+
+ ✓ src/lab/motion.test.ts (8 tests) 14ms
+ ✓ src/lab/rig.test.ts (14 tests) 231ms
+
+ Test Files  2 passed (2)
+      Tests  22 passed (22)
+   Start at  22:53:19
+   Duration  437ms (transform 103ms, setup 0ms, collect 123ms, tests 246ms, environment 0ms, prepare 78ms)

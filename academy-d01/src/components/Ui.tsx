@@ -42,7 +42,7 @@ export function DemoTag() {
   return (
     <span className="demo-tag">
       <span />
-      Пример данных · D0.2
+      Пример данных · D0.3
     </span>
   );
 }

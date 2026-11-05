@@ -1,4 +1,4 @@
-"""Local TLS server for the existing D0.2 dist. No authentication; trusted LAN only."""
+"""Local TLS server for the existing D0.3 dist. No authentication; trusted LAN only."""
 import ssl
 from argparse import ArgumentParser
 from functools import partial
@@ -43,7 +43,7 @@ def main():
     args = parser.parse_args()
     directory = Path(__file__).resolve().parents[1] / 'dist'
     if not (directory / 'index.html').is_file():
-        parser.error('Missing dist/index.html; use the D0.2 runnable build or npm run build.')
+        parser.error('Missing dist/index.html; use the D0.3 runnable build or npm run build.')
     for path in (args.cert, args.key):
         if path.resolve().is_relative_to(directory.resolve()):
             parser.error('Certificates and private keys must be outside dist.')
@@ -55,7 +55,7 @@ def main():
         parser.error(f'Cannot load TLS certificate/key: {error}')
     server = ThreadingHTTPServer((args.host, args.port), partial(HttpsDemoHandler, directory=str(directory)))
     server.socket = context.wrap_socket(server.socket, server_side=True)
-    print(f'D0.2 HTTPS: https://{args.host}:{args.port}/lab', flush=True)
+    print(f'D0.3 HTTPS: https://{args.host}:{args.port}/lab', flush=True)
     print('No authentication. Trusted LAN only. Do not forward this port to the Internet.', flush=True)
     try:
         server.serve_forever()
