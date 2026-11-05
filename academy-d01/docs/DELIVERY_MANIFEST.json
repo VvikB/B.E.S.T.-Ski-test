@@ -1,0 +1,21 @@
+{
+  "version": "D0.1",
+  "implementation_commit": "fc3985060241af304d01aafdfd534910889bb6ce",
+  "unit_passed": 8,
+  "browser_passed": 31,
+  "browser_skipped": 1,
+  "browser_failed": 0,
+  "automated_axe_violations": 0,
+  "browser_profiles": [
+    "desktop Chromium",
+    "iPhone-sized mobile Chromium emulation"
+  ],
+  "physical_iPhone_tested": false,
+  "methodically_approved": false,
+  "external_deployment": false,
+  "legacy_bot_unchanged": true,
+  "screenshots": 10,
+  "demo_video": "MP4/H264 and WebM; desktop software WebGL",
+  "python_compiled_demo_smoke": "4 routes + actual 3D frame-step; no page errors",
+  "source_rights": "original procedural graphics, synthetic data; dependency notices included"
+}
